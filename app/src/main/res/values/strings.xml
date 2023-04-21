@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FirstProject</string>
+    <string name="dateButton">DATY</string>
+    <string name="timeButton">CZAS</string>
+    <string name="daysBetween">Dni pomiędzy datami:</string>
+    <string name="workingDaysBetween">Dni robocze pomiędzy datami:</string>
+    <string name="backText">POWRÓT</string>
+</resources>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DateCalc">
+
+    <DatePicker
+        android:id="@+id/topDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="16dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        app:layout_constraintBottom_toTopOf="@+id/bottomDatePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <DatePicker
+        android:id="@+id/bottomDatePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="15dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topDatePicker" />
+
+    <TextView
+        android:id="@+id/daysBetweenText"
+        android:layout_width="206dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="43dp"
+        android:text="@string/daysBetween"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/workingDaysBetweenText"
+        app:layout_constraintEnd_toStartOf="@+id/daysBetweenValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bottomDatePicker" />
+
+    <TextView
+        android:id="@+id/workingDaysBetweenText"
+        android:layout_width="271dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="100dp"
+        android:text="@string/workingDaysBetween"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/workingDaysBetweenValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daysBetweenValue" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="62dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/workingDaysBetweenValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/daysBetweenValue" />
+
+    <TextView
+        android:id="@+id/workingDaysBetweenValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="100dp"
+        android:text="365"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/workingDaysBetweenText"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <EditText
+        android:id="@+id/daysBetweenValue"
+        android:layout_width="57dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="365"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/workingDaysBetweenValue"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/daysBetweenText"
+        app:layout_constraintTop_toBottomOf="@+id/bottomDatePicker" />
+
+    <Button
+        android:id="@+id/dateBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="152dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/backText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workingDaysBetweenText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
