@@ -2,6 +2,7 @@ package edu.put.inf151753
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -11,13 +12,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun switchToDateActivity(){
-        val myIntent = Intent(this, DateCalc::class.java)
-        startActivity(myIntent)
+    fun changeToTime(view: View){
+        startActivity(Intent(this, TimeCalc::class.java))
     }
 
-    fun switchToTimeActivity(){
-        val myIntent = Intent(this, DateCalc::class.java)
-        startActivity(myIntent)
+    fun changeToDate(view: View){
+        startActivity(Intent(this, DateCalc::class.java))
     }
 }
