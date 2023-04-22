@@ -27,15 +27,17 @@
           android:id="@+id/hourTopText"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="H" />
+          android:text="@string/hours" />
 
       <EditText
           android:id="@+id/hourTop"
           android:layout_width="48dp"
           android:layout_height="55dp"
           android:ems="10"
+          android:importantForAutofill="no"
           android:inputType="number"
-          android:text="0" />
+          android:text="@string/startingVal"
+          tools:ignore="LabelFor,DuplicateSpeakableTextCheck" />
     </LinearLayout>
 
     <LinearLayout
@@ -47,7 +49,7 @@
           android:id="@+id/minuteTopText"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="M" />
+          android:text="@string/minutes" />
 
       <EditText
           android:id="@+id/minuteTop"
@@ -55,7 +57,9 @@
           android:layout_height="55dp"
           android:ems="10"
           android:inputType="number"
-          android:text="0" />
+          android:text="@string/startingVal"
+          android:importantForAutofill="no"
+          tools:ignore="LabelFor" />
     </LinearLayout>
 
     <LinearLayout
@@ -69,7 +73,7 @@
           android:id="@+id/secondTopText"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="S" />
+          android:text="@string/seconds" />
 
       <EditText
           android:id="@+id/secondTop"
@@ -77,7 +81,9 @@
           android:layout_height="55dp"
           android:ems="10"
           android:inputType="number"
-          android:text="0" />
+          android:text="@string/startingVal"
+          android:importantForAutofill="no"
+          tools:ignore="LabelFor" />
     </LinearLayout>
   </LinearLayout>
 
@@ -104,7 +110,7 @@
           android:id="@+id/hourBottomText"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="H" />
+          android:text="@string/hours" />
 
       <EditText
           android:id="@+id/hourBottom"
@@ -112,7 +118,9 @@
           android:layout_height="55dp"
           android:ems="10"
           android:inputType="number"
-          android:text="0" />
+          android:text="@string/startingVal"
+          android:importantForAutofill="no"
+          tools:ignore="LabelFor" />
     </LinearLayout>
 
     <LinearLayout
@@ -124,7 +132,7 @@
           android:id="@+id/minuteBottomText"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="M" />
+          android:text="@string/minutes" />
 
       <EditText
           android:id="@+id/minuteBottom"
@@ -132,7 +140,9 @@
           android:layout_height="55dp"
           android:ems="10"
           android:inputType="number"
-          android:text="0" />
+          android:text="@string/startingVal"
+          android:importantForAutofill="no"
+          tools:ignore="LabelFor" />
     </LinearLayout>
 
     <LinearLayout
@@ -146,7 +156,7 @@
           android:id="@+id/secondBottomText"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="S" />
+          android:text="@string/seconds" />
 
       <EditText
           android:id="@+id/secondBottom"
@@ -154,7 +164,9 @@
           android:layout_height="55dp"
           android:ems="10"
           android:inputType="number"
-          android:text="0" />
+          android:text="@string/startingVal"
+          android:importantForAutofill="no"
+          tools:ignore="LabelFor" />
     </LinearLayout>
   </LinearLayout>
 
@@ -165,7 +177,8 @@
       android:layout_marginStart="58dp"
       android:layout_marginTop="86dp"
       android:layout_marginEnd="32dp"
-      android:text="+"
+      android:onClick="addTime"
+      android:text="@string/plusSign"
       app:layout_constraintEnd_toStartOf="@+id/timeMinusButton"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
@@ -177,7 +190,8 @@
       android:layout_marginStart="32dp"
       android:layout_marginTop="84dp"
       android:layout_marginEnd="63dp"
-      android:text="-"
+      android:onClick="subtractTime"
+      android:text="@string/minusSign"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toEndOf="@+id/timePlusButton"
       app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
@@ -190,8 +204,8 @@
       android:layout_marginTop="34dp"
       android:layout_marginEnd="163dp"
       android:layout_marginBottom="198dp"
-      android:onClick="clearBottom"
-      android:text="AC"
+      android:onClick="clearBoth"
+      android:text="@string/clear"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"

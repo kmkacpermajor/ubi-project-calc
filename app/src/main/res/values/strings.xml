@@ -5,4 +5,11 @@
     <string name="daysBetween">Dni pomiędzy datami:</string>
     <string name="workingDaysBetween">Dni robocze pomiędzy datami:</string>
     <string name="backText">POWRÓT</string>
+    <string name="plusSign">+</string>
+    <string name="minusSign">-</string>
+    <string name="startingVal">0</string>
+    <string name="seconds">S</string>
+    <string name="minutes">M</string>
+    <string name="hours">H</string>
+    <string name="clear">AC</string>
 </resources>
